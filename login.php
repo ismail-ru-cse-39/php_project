@@ -1,3 +1,11 @@
+<?php
+	session_start();
+	if($_SESSION['uid']){
+		header('location:admin/admindash.php');
+	}
+
+?>
+
 <!DOCTYPE HTML>
 <html lang = "en_US">
 
@@ -58,7 +66,11 @@ if(isset($_POST['login'])){
 	{
 		$data = mysqli_fetch_assoc($run) ;
 		$id = $data['id'];
-		echo "id = ".$id;
+		//echo "id = ".$id;
+		//session_start();
+		$_SESSION['uid'] = $id;
+		header('location:admin/admindash.php');
+		
 	}
 
 

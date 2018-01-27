@@ -80,7 +80,12 @@ else{
 		$city = $_POST['city'];
 		$pcon = $_POST['pcon'];
 		$std = $_POST['std'];
-		$qry = "INSERT INTO `student`( `rollno`, `name`, `city`, `parent_contact`, `standerd`) VALUES ('$rollno', '$name', '$city', '$pcon', '$std')";
+		$imagename = $_FILES['simg']['name'];
+		$tempname = $_FILES['simg']['tmp_name'];
+
+		move_uploaded_file($tempname, "../dataimg/$imagename");
+
+		$qry = "INSERT INTO `student`( `rollno`, `name`, `city`, `parent_contact`, `standerd`,`image`) VALUES ('$rollno', '$name', '$city', '$pcon','$std','$imagename')";
 		$run = mysqli_query($con, $qry);
 
 		if($run == true){

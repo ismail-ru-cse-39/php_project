@@ -19,7 +19,7 @@ function showdetails($standerd, $rollno){
 			</tr>
 
 			<tr>
-				<td rowspan = "5"><img src = "dataimg/<?php echo $data['image']; ?>" style = "max_height:150px; max_width:120px;" /> </td>
+				<td rowspan = "5"><img src = "dataimg/<?php echo $data['image']; ?>" style="max-height:50px; max-width:30px;" /> </td>
 				<th>Roll No</th>
 				<td><?php echo $data['rollno']; ?> </td>
 			</tr>

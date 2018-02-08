@@ -64,8 +64,8 @@
 		$standerd = $_POST['std'];
 		$rollno = $_POST['rollno'];
 
-		echo $standerd;
-		echo $rollno;
+		//echo $standerd;
+		//echo $rollno;
 
 		include('dbcon.php');
 		include('function.php');

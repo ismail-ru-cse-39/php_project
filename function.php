@@ -12,14 +12,14 @@ function showdetails($standerd, $rollno){
 
 		?>
 
-		<table>
+		<table border = "1" style="width:80%; margin-top:20px" align="center">
 
 			<tr>
 				<th colspan = "3">Student Details</th>
 			</tr>
 
 			<tr>
-				<td rowspan = "5"><img src = "dataimg/<?php echo $data['image']; ?>" style="max-height:200px; max-width:170px;" /> </td>
+				<td rowspan = "5"><img src = "dataimg/<?php echo $data['image']; ?>" style="max-height:200px; max-width:170px; padding-left:30px;" /> </td>
 				<th>Roll No</th>
 				<td><?php echo $data['rollno']; ?> </td>
 			</tr>
